@@ -13,7 +13,7 @@ export default function Home() {
         <SearchBox />
         <Word />
         {definitions}
-        <Footer />
+        <Footer word={'hello'} />
       </div>
     </main>
   );
