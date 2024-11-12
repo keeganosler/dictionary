@@ -26,7 +26,7 @@ export default function Home() {
       <div className="flex flex-col mx-10 max-w-screen-lg">
         <Header />
         <SearchBox updateWord={updateWord} updateDefinitions={updateDefinitions} />
-        <Word word={word} />
+        <Word word={word} definitions={definitions} />
         <Definition definitions={definitions} />
         <Footer word={'hello'} />
       </div>
