@@ -11,9 +11,9 @@ const searchWord = async (word: string) => {
 
 export default function SearchBox({updateWord, updateDefinitions}: any) {
 
-    const handleInput = (input: string) => {
+    const handleInput = async (input: string) => {
         updateWord(input);
-        const definitionsResult = searchWord(input);
+        const definitionsResult = await searchWord(input);
         updateDefinitions(definitionsResult);
     }
 
