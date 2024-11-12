@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="flex justify-center align-center">
-      <div className="flex-col">
+      <div className="flex flex-col mx-10 max-w-screen-lg">
         <Header />
         <SearchBox updateWord={updateWord} updateDefinitions={updateDefinitions} />
         <Word word={word} />
