@@ -1,4 +1,4 @@
-export default function Footer(props: any) {
+export default function Footer(props: {word: string}) {
     const url: string = 'https://en.wiktionary.org/wiki/' + props.word;
     const ariaLabel: string = "Open Link to " + props.word + " Definition"
     return (

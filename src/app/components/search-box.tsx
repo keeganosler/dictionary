@@ -1,10 +1,12 @@
 "use client";
 
+import { Definition } from "../models/Definition";
+
 const fetchApi = async (word: string) => {
     return fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word);
 } 
 
-const searchWord = async (word: string) => {
+const searchWord = async (word: string): Promise<Definition[]> => {
     const response = await fetchApi(word);
     return await response.json();
 }

@@ -1,14 +1,16 @@
-export default function Word(props: any) {
+import { Definition } from "../models/Definition";
 
-    const getPhonetic = () => {
-        return props.definitions?.find((definition:any) => definition.phonetic);
+export default function Word(props: {word: string, definitions: Definition[] | undefined}) {
+
+    const getPhonetic = ():(Definition | undefined) => {
+        return props.definitions?.find((definition:Definition) => definition.phonetic);
     }
 
-    const getPhoneticText = () => {
+    const getPhoneticText = ():(string | undefined) => {
         return getPhonetic()?.phonetic;
     }
 
-    const getPhoneticAudioUrl = () => {
+    const getPhoneticAudioUrl = ():(string |undefined) => {
         return getPhonetic()?.phonetics?.[0].audio;
     }
 

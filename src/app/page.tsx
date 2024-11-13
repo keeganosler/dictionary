@@ -11,8 +11,8 @@ export default function Home() {
 
   const [word, setWord] = useState('');
 
-  const updateWord = (w: string) => {
-    setWord(w);
+  const updateWord = (word: string) => {
+    setWord(word);
   }
 
   const [definitions, setDefinitions] = useState();
@@ -28,7 +28,7 @@ export default function Home() {
         <SearchBox updateWord={updateWord} updateDefinitions={updateDefinitions} />
         <Word word={word} definitions={definitions} />
         <Definition definitions={definitions} />
-        <Footer word={'hello'} />
+        <Footer word={word} />
       </div>
     </main>
   );
