@@ -2,9 +2,9 @@ export default function Footer(props: {word: string}) {
     const url: string = 'https://en.wiktionary.org/wiki/' + props.word;
     const ariaLabel: string = "Open Link to " + props.word + " Definition"
     return (
-        <div className="flex gap-2 text-sm">
-            <div className="flex gap-4 font-serif">
-                <p className="font-thin">Source:</p>
+        <div className="border-t flex py-4 mt-4 gap-2 text-sm">
+            <div className="flex gap-4">
+                <p className="font-light">Source:</p>
                 <p className="italic underline font-semibold">{url}</p>
             </div>
             <a 
