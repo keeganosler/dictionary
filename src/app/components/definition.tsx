@@ -1,7 +1,9 @@
 import { type Definition } from "../models/Definition";
+import { EmptyResult } from "../models/EmptyResult";
 
-export default function Definition(props: {definitions: Definition[] | undefined}) {
+export default function Definition(props: {definitions: Definition[] | EmptyResult | undefined}) {
     return (
+        Array.isArray(props.definitions) ?
         <div>
             {props.definitions?.[0].meanings.map(meaning => (
                 <>
@@ -30,6 +32,11 @@ export default function Definition(props: {definitions: Definition[] | undefined
                 </>
             ))}            
         </div>
-
+        :
+        <div>
+            <h1 className="text-2xl font-bold italic py-6">{props.definitions?.title}</h1>
+            <h2 className="text-lg font-light">{props.definitions?.message}</h2>
+            <h2 className="text-lg font-light">{props.definitions?.resolution}</h2>
+        </div>
     )
 }

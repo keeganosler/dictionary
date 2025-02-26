@@ -1,4 +1,3 @@
-import Dropdown from "./shared/dropdown";
 import Toggle from "./shared/toggle";
 
 export default function Header() {
@@ -7,12 +6,7 @@ export default function Header() {
             <div>
                 {/* icon here */}
             </div>
-            <div className="flex align-center">
-                <div>
-                    <Dropdown />
-                    <Toggle />
-                </div>
-            </div>
+                <Toggle />
         </div>
     )
 }

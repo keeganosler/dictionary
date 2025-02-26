@@ -26,9 +26,13 @@ export default function Home() {
       <div className="flex flex-col mx-10 max-w-screen-lg">
         <Header />
         <SearchBox updateWord={updateWord} updateDefinitions={updateDefinitions} />
-        <Word word={word} definitions={definitions} />
-        <Definition definitions={definitions} />
-        <Footer word={word} />
+        {word !== '' && 
+          <>
+            {Array.isArray(definitions) && <Word word={word} definitions={definitions} />}
+            <Definition definitions={definitions} />
+            {Array.isArray(definitions) && <Footer word={word} />}
+          </>
+        }
       </div>
     </main>
   );
