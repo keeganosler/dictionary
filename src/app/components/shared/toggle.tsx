@@ -14,14 +14,12 @@ export default function Toggle() {
     })
 
     return (
-        <div className="flex">
+        <div className="flex items-center">
             <label className="inline-flex items-center cursor-pointer">
                 <input type="checkbox" id="theme-switcher" onChange={() => setToggleOn(!toggleOn)} className="sr-only peer" />
                 <div className="relative w-7 h-4 bg-gray-400 peer-focus:outline-none rounded-full peer dark:bg-gray-400 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-gray-400 peer-checked:bg-fuchsia-700 dark:peer-checked:bg-fuchsia-700"></div>
             </label>
             <MoonIcon className={`ml-2 size-5 ${toggleOn ? 'text-fuchsia-700' : 'text-gray-300'}`} />        
         </div>
-
-
     )
 }
